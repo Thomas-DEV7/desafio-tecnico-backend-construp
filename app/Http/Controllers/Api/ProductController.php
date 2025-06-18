@@ -63,4 +63,52 @@ class ProductController extends Controller
             ], 500);
         }
     }
+
+    // app/Http/Controllers/Api/ProductController.php
+
+    public function update(Request $request, Product $product)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'price' => 'required|numeric|min:0',
+            'quantity' => 'required|integer|min:0',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors()
+            ], 422);
+        }
+
+        try {
+            $product->update($request->all());
+            return response()->json([
+                'success' => true,
+                'data' => $product
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to update product'
+            ], 500);
+        }
+    }
+
+    public function destroy(Product $product)
+    {
+        try {
+            $product->delete();
+            return response()->json([
+                'success' => true,
+                'message' => 'Product deleted successfully'
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to delete product'
+            ], 500);
+        }
+    }
 }
