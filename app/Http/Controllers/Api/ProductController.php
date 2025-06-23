@@ -77,7 +77,6 @@ class ProductController extends Controller
         }
     }
 
-    // app/Http/Controllers/Api/ProductController.php
 
     public function update(Request $request, Product $product)
     {
