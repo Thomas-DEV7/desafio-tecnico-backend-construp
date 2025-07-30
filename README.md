@@ -1,60 +1,30 @@
-# 🏗️ Desafio Técnico – CRUD de Produtos | Construp
+# 🏗️ Backend – Desafio Técnico CRUD de Produtos | Construp
 
-![Logo da Construp](https://www.construp.com.br/img/new-logo.bdeb3a22.png)
+Este repositório contém a implementação do **backend** do desafio técnico proposto pela empresa **Construp**, utilizando o framework **Laravel 11** com integração à plataforma **Supabase** como banco de dados.
 
-Este repositório apresenta a solução desenvolvida para o desafio técnico da **Construp**, cujo objetivo foi a construção de uma aplicação completa para gerenciamento de produtos utilizando **Laravel (Backend)** com integração à plataforma **Supabase** e **Vue.js (Frontend)**.
-
----
-
-## 📌 Descrição do Desafio
-
-O desafio consistia na implementação de uma aplicação full-stack com as seguintes funcionalidades principais:
-
-- Criação de produto (nome, descrição, preço, imagem)
-- Listagem de produtos com paginação
-- Edição de dados de um produto
-- Exclusão de produtos
-- Interface responsiva e intuitiva
-
-Requisitos adicionais:
-
-- Integração com banco de dados Supabase
-- API RESTful com autenticação (JWT ou outra)
-- Separação clara entre frontend e backend
+A API oferece endpoints RESTful para cadastro, listagem, atualização e exclusão de produtos, além de autenticação básica via Sanctum.
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## 🧰 Tecnologias Utilizadas
 
-### Backend (API)
 - Laravel 11 (PHP 8.3)
 - Supabase (PostgreSQL)
 - Laravel Sanctum (autenticação)
 - Laravel Eloquent ORM
-- Laravel Resource API
 - PHPUnit (testes)
-
-### Frontend
-- Vue.js 3 (Composition API)
-- Vue Router
-- Axios
-- Pinia (gerenciamento de estado)
-- Tailwind CSS (estilização)
+- Docker
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura de Pastas
 
-```plaintext
-desafio-crud-construp/
-├── backend-laravel/
-│   ├── app/
-│   ├── routes/
-│   ├── tests/
-│   └── ...
-├── frontend-vue/
-│   ├── src/
-│   ├── public/
-│   └── ...
-├── docker-compose.yml
-└── README.md
+```bash
+backend/
+├── app/
+├── config/
+├── database/
+├── routes/
+│   └── api.php
+├── tests/
+└── .env.example
