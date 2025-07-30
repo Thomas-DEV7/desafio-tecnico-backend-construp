@@ -1,65 +1,60 @@
-# Product Registration System - Backend
+# 🏗️ Desafio Técnico – CRUD de Produtos | Construp
 
-## System Requirements
-- PHP 8.0+
-- Composer 2.0+
-- MySQL 5.7+ or MariaDB 10.3+
-- Laravel 10.x
+![Logo da Construp](https://www.construp.com.br/img/new-logo.bdeb3a22.png)
 
-## Installation
+Este repositório apresenta a solução desenvolvida para o desafio técnico da **Construp**, cujo objetivo foi a construção de uma aplicação completa para gerenciamento de produtos utilizando **Laravel (Backend)** com integração à plataforma **Supabase** e **Vue.js (Frontend)**.
 
-#### 1. Clone the repository:
-```bash
-git clone [backend-repository-url]
-cd product-registration-system
-```
-#### 2. Install dependencies:
-```bash
-composer install
-```
+---
 
-#### 3. Configure environment:
-```bash
-cp .env.example .env
-```
+## 📌 Descrição do Desafio
 
-#### 4. Generate application key:
-```bash
-php artisan key:generate
-```
+O desafio consistia na implementação de uma aplicação full-stack com as seguintes funcionalidades principais:
 
-#### 6. Configure database in .env:
-```js
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=product_registration
-DB_USERNAME=root
-DB_PASSWORD=
-```
+- Criação de produto (nome, descrição, preço, imagem)
+- Listagem de produtos com paginação
+- Edição de dados de um produto
+- Exclusão de produtos
+- Interface responsiva e intuitiva
 
-#### 7. Start development server:
+Requisitos adicionais:
 
-```bash
-php artisan serve
-```
+- Integração com banco de dados Supabase
+- API RESTful com autenticação (JWT ou outra)
+- Separação clara entre frontend e backend
 
-### API Endpoints
-<br>
+---
 
-#### Products
-GET ``/api/products`` - List products (paginated)
+## ⚙️ Tecnologias Utilizadas
 
-POST ``/api/products`` - Create new product
+### Backend (API)
+- Laravel 11 (PHP 8.3)
+- Supabase (PostgreSQL)
+- Laravel Sanctum (autenticação)
+- Laravel Eloquent ORM
+- Laravel Resource API
+- PHPUnit (testes)
 
-PUT ``/api/products/{id}`` - Update product
+### Frontend
+- Vue.js 3 (Composition API)
+- Vue Router
+- Axios
+- Pinia (gerenciamento de estado)
+- Tailwind CSS (estilização)
 
-DELETE ``/api/products/{id}`` - Delete product
+---
 
-#### Validation Rules
-```yml
-Name: required, string, max 255 chars
-Description: nullable, string
-Price: required, numeric, min 0
-Quantity: required, integer, min 0
-```
+## 📁 Estrutura do Projeto
+
+```plaintext
+desafio-crud-construp/
+├── backend-laravel/
+│   ├── app/
+│   ├── routes/
+│   ├── tests/
+│   └── ...
+├── frontend-vue/
+│   ├── src/
+│   ├── public/
+│   └── ...
+├── docker-compose.yml
+└── README.md
