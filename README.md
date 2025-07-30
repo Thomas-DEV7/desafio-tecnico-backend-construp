@@ -1,48 +1,47 @@
-# 🖥️ Frontend – Desafio Técnico CRUD de Produtos | Construp
+# 🏗️ Backend – Desafio Técnico CRUD de Produtos | Construp
 
 ![Logo da Construp](https://www.construp.com.br/img/new-logo.bdeb3a22.png)
 
-Este repositório contém a implementação do **frontend** para o desafio técnico proposto pela empresa **Construp**, utilizando **Vue.js 3** com a API RESTful desenvolvida em Laravel. A interface permite interação completa com o CRUD de produtos e foi construída com foco em organização, responsividade e clareza de código.
+Este repositório contém a implementação do **backend** da aplicação desenvolvida para o **desafio técnico** da empresa **Construp**, utilizando o framework **Laravel 11**, com banco de dados **Supabase (PostgreSQL)**. A API fornece endpoints RESTful seguros e eficientes para manipulação de produtos, com suporte a autenticação via **Laravel Sanctum**.
 
 ---
 
 ## 📌 Descrição do Desafio
 
-O desafio consistia em construir uma interface web capaz de se comunicar com uma API, oferecendo as seguintes funcionalidades:
+O desafio teve como objetivo construir uma API moderna para gerenciamento de produtos, com as seguintes funcionalidades:
 
-- Listagem de produtos (nome, preço, imagem e descrição)
-- Criação de novo produto
-- Edição de produto existente
-- Exclusão de produto
-- Layout responsivo e amigável
-- Integração com backend via HTTP (Axios)
+- Cadastro de produtos (nome, descrição, preço, imagem)
+- Listagem com paginação
+- Edição de informações
+- Exclusão de produtos
+- Upload de imagens com Supabase Storage
+- Autenticação para proteção de rotas
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🧰 Tecnologias Utilizadas
 
-- Vue.js 3 (Vite + Composition API)
-- Vue Router
-- Pinia (Gerenciamento de estado)
-- Axios
-- Tailwind CSS
-- Docker (ambiente de desenvolvimento)
-- Vitest (testes)
+- Laravel 11 (PHP 8.3)
+- Supabase (PostgreSQL + Storage)
+- Laravel Sanctum (autenticação)
+- Laravel Eloquent ORM
+- PHPUnit (testes)
+- Docker e Docker Compose
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```bash
-frontend/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── router/
-│   ├── stores/
-│   ├── views/
-│   └── App.vue
-├── public/
+backend/
+├── app/
+│   ├── Http/
+│   ├── Models/
+│   └── Services/
+├── routes/
+│   └── api.php
+├── database/
+│   └── migrations/
+├── tests/
 ├── .env.example
-├── vite.config.js
-└── README.md
+└── docker-compose.yml
