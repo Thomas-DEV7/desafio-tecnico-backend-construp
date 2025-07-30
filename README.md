@@ -1,30 +1,48 @@
-# 🏗️ Backend – Desafio Técnico CRUD de Produtos | Construp
+# 🖥️ Frontend – Desafio Técnico CRUD de Produtos | Construp
 
-Este repositório contém a implementação do **backend** do desafio técnico proposto pela empresa **Construp**, utilizando o framework **Laravel 11** com integração à plataforma **Supabase** como banco de dados.
+![Logo da Construp](https://www.construp.com.br/img/new-logo.bdeb3a22.png)
 
-A API oferece endpoints RESTful para cadastro, listagem, atualização e exclusão de produtos, além de autenticação básica via Sanctum.
-
----
-
-## 🧰 Tecnologias Utilizadas
-
-- Laravel 11 (PHP 8.3)
-- Supabase (PostgreSQL)
-- Laravel Sanctum (autenticação)
-- Laravel Eloquent ORM
-- PHPUnit (testes)
-- Docker
+Este repositório contém a implementação do **frontend** para o desafio técnico proposto pela empresa **Construp**, utilizando **Vue.js 3** com a API RESTful desenvolvida em Laravel. A interface permite interação completa com o CRUD de produtos e foi construída com foco em organização, responsividade e clareza de código.
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📌 Descrição do Desafio
+
+O desafio consistia em construir uma interface web capaz de se comunicar com uma API, oferecendo as seguintes funcionalidades:
+
+- Listagem de produtos (nome, preço, imagem e descrição)
+- Criação de novo produto
+- Edição de produto existente
+- Exclusão de produto
+- Layout responsivo e amigável
+- Integração com backend via HTTP (Axios)
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- Vue.js 3 (Vite + Composition API)
+- Vue Router
+- Pinia (Gerenciamento de estado)
+- Axios
+- Tailwind CSS
+- Docker (ambiente de desenvolvimento)
+- Vitest (testes)
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```bash
-backend/
-├── app/
-├── config/
-├── database/
-├── routes/
-│   └── api.php
-├── tests/
-└── .env.example
+frontend/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── router/
+│   ├── stores/
+│   ├── views/
+│   └── App.vue
+├── public/
+├── .env.example
+├── vite.config.js
+└── README.md
